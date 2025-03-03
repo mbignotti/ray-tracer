@@ -1,10 +1,9 @@
 -- premake5.lua
-workspace "WalnutApp"
-   architecture "x64"
+workspace "ray-tracer"
    configurations { "Debug", "Release", "Dist" }
-   startproject "WalnutApp"
+   startproject "ray-tracer"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-include "Walnut/WalnutExternal.lua"
 
-include "WalnutApp"
+include "ray-tracer"
+include "walnut"
