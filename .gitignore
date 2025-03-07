@@ -17,3 +17,5 @@ Makefile
 RayTracer.make
 
 .vscode
+
+imgui.ini
