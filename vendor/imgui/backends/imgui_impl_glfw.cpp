@@ -621,8 +621,6 @@ static void ImGui_ImplGlfw_UpdateMouseData()
         // See https://github.com/glfw/glfw/issues/1236 if you want to help in making this a GLFW feature.
 #if GLFW_HAS_MOUSE_PASSTHROUGH || (GLFW_HAS_WINDOW_HOVERED && defined(_WIN32))
         const bool window_no_input = (viewport->Flags & ImGuiViewportFlags_NoInputs) != 0;
-#if GLFW_HAS_MOUSE_PASSTHROUGH
-        const bool window_no_input = (viewport->Flags & ImGuiViewportFlags_NoInputs) != 0;
         //glfwSetWindowAttrib(window, GLFW_MOUSE_PASSTHROUGH, window_no_input);
 
         // Bug fix (for multithreading), don't call glfwSetWindowAttrib with GLFW_MOUSE_PASSTHROUGH every frame, because it ends up firing an
@@ -633,7 +631,6 @@ static void ImGui_ImplGlfw_UpdateMouseData()
             glfwSetWindowAttrib(window, GLFW_MOUSE_PASSTHROUGH, true);
         else if(!window_no_input && has_attribute)
             glfwSetWindowAttrib(window, GLFW_MOUSE_PASSTHROUGH, false);
-#endif
         if (glfwGetWindowAttrib(window, GLFW_HOVERED) && !window_no_input)
             mouse_viewport_id = viewport->ID;
 #else
