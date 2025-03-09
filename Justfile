@@ -1,3 +1,7 @@
+setup:
+    premake5 gmake
+    cp imgui.ini.sample imgui.ini
+
 build-debug:
     premake5 gmake
     make
