@@ -19,7 +19,7 @@ workspace "RayTracer"
 
       includedirs {
          "vendor/imgui", "vendor/stb_image", "vendor/glfw/include", 
-         "vendor/glm/glm", "/usr/include/freetype2"
+         "vendor/glm/glm", 
       }
 
       links { "vulkan", "ImGui", "GLFW", "glm" }
