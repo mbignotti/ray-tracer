@@ -10,12 +10,18 @@ obj/
 *.vcxproj.filters
 *.sln
 
-# Exclude
+# Exclude binaries
 !vendor/bin
 
+# Exclude build files
 Makefile
 RayTracer.make
 
+# Vscode stuff
 .vscode
 
+# Imgui ini
 imgui.ini
+
+# Cmake build assets
+build/
