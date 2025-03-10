@@ -1,4 +1,5 @@
 setup:
+    uv run --with pre-commit pre-commit install
     premake5 gmake
     cp imgui.ini.sample imgui.ini
 

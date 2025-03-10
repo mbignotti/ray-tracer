@@ -55,6 +55,6 @@ repos:
       - id: commitizen
         stages: [commit-msg]
       - id: commitizen-branch
-        stages: [push]
+        stages: [pre-push]
 
   # }}}
